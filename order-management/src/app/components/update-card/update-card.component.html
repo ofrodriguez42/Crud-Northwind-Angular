@@ -1,0 +1,89 @@
+<div class="card form-container">
+  <h2>Buscar y Actualizar Orden o Detalle de Orden</h2>
+
+  <!-- Búsqueda de Orden -->
+  <div class="input-field">
+    <label for="orderId">Buscar Orden por OrderID:</label>
+    <input
+      type="number"
+      id="orderId"
+      placeholder="Buscar por OrderID"
+      [(ngModel)]="orderId"
+      name="orderId"
+    />
+    <button class="button search-button" (click)="handleSearchOrder()">Buscar Orden</button>
+  </div>
+
+  <!-- Datos de la Orden -->
+  <div *ngIf="orderData">
+    <h3>Actualizar Orden</h3>
+    <form>
+      <label for="customerId">CustomerID:</label>
+      <input type="text" id="customerId" [(ngModel)]="orderData.CustomerID" name="CustomerID" />
+
+      <!-- Otros campos de la orden -->
+      <label for="employeeId">EmployeeID:</label>
+      <input type="number" id="employeeId" [(ngModel)]="orderData.EmployeeID" name="EmployeeID" />
+
+      <label for="orderDate">OrderDate:</label>
+      <input type="datetime-local" id="orderDate" [(ngModel)]="orderData.OrderDate" name="OrderDate" />
+
+      <label for="requiredDate">RequiredDate:</label>
+      <input type="datetime-local" id="requiredDate" [(ngModel)]="orderData.RequiredDate" name="RequiredDate" />
+
+      <label for="shippedDate">ShippedDate:</label>
+      <input type="datetime-local" id="shippedDate" [(ngModel)]="orderData.ShippedDate" name="ShippedDate" />
+
+      <!-- Campos restantes -->
+      <label for="shipName">ShipName:</label>
+      <input type="text" id="shipName" [(ngModel)]="orderData.ShipName" name="ShipName" />
+
+      <label for="shipAddress">ShipAddress:</label>
+      <input type="text" id="shipAddress" [(ngModel)]="orderData.ShipAddress" name="ShipAddress" />
+
+      <label for="shipCity">ShipCity:</label>
+      <input type="text" id="shipCity" [(ngModel)]="orderData.ShipCity" name="ShipCity" />
+
+      <label for="shipRegion">ShipRegion:</label>
+      <input type="text" id="shipRegion" [(ngModel)]="orderData.ShipRegion" name="ShipRegion" />
+
+      <label for="shipPostalCode">ShipPostalCode:</label>
+      <input type="text" id="shipPostalCode" [(ngModel)]="orderData.ShipPostalCode" name="ShipPostalCode" />
+
+      <label for="shipCountry">ShipCountry:</label>
+      <input type="text" id="shipCountry" [(ngModel)]="orderData.ShipCountry" name="ShipCountry" />
+
+      <button class="button save-button" (click)="handleUpdateOrder()">Actualizar Orden</button>
+    </form>
+  </div>
+
+  <!-- Búsqueda de Detalle de la Orden -->
+  <div class="input-field">
+    <label for="productId">Buscar Detalle de Orden por ProductID:</label>
+    <input
+      type="number"
+      id="productId"
+      placeholder="Buscar por ProductID"
+      [(ngModel)]="productId"
+      name="productId"
+    />
+    <button class="button search-button" (click)="handleSearchOrderDetail()">Buscar Detalle de Orden</button>
+  </div>
+
+  <!-- Datos del Detalle de la Orden -->
+  <div *ngIf="orderDetailData">
+    <h3>Actualizar Detalle de Orden</h3>
+    <form>
+      <label for="unitPrice">UnitPrice:</label>
+      <input type="number" id="unitPrice" [(ngModel)]="orderDetailData.UnitPrice" name="UnitPrice" />
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" [(ngModel)]="orderDetailData.Quantity" name="Quantity" />
+
+      <label for="discount">Discount:</label>
+      <input type="number" id="discount" [(ngModel)]="orderDetailData.Discount" name="Discount" />
+
+      <button class="button save-button" (click)="handleUpdateOrderDetail()">Actualizar Detalle de Orden</button>
+    </form>
+  </div>
+</div>

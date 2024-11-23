@@ -1,0 +1,18 @@
+<div class="form-container">
+  <h2>Consultar Orden</h2>
+  <label for="orderId">Order ID:</label>
+  <input type="text" id="orderId" [(ngModel)]="orderId" name="orderId" />
+  <button (click)="handleSearchOrder()">Buscar Orden</button>
+
+  <div *ngIf="orderData">
+    <h3>Datos de la Orden</h3>
+    <table class="data-table">
+      <tbody>
+      <tr *ngFor="let entry of (orderData | keyvalue)">
+        <th>{{ entry.key }}</th>
+        <td>{{ entry.value }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

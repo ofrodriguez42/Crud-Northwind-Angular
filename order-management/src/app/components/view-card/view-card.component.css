@@ -1,0 +1,40 @@
+/* src/app/components/view-card/view-card.component.css */
+
+.form-container {
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  max-width: 800px;
+}
+
+.form-container:hover {
+  transform: translateY(-10px);
+}
+
+/* Table Styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #f9fafb;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.data-table th {
+  background: #6366f1;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.data-table tr:nth-child(even) {
+  background: #f3f4f6;
+}

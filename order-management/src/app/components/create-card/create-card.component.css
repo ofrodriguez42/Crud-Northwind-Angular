@@ -1,0 +1,15 @@
+/* src/app/components/create-card/create-card.component.css */
+
+.form-container {
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  max-width: 800px;
+}
+
+.form-container:hover {
+  transform: translateY(-10px);
+}
